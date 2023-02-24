@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-            	withCredentials([usernamePassword(credentialsId: 'docker-user', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
+            	withCredentials([usernamePassword(credentialsId: 'cred-docker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh   """
                         docker login -u $USERNAME -p $PASSWORD
                         docker build -t esraazizo/hello-world ./app/
