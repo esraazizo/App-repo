@@ -15,7 +15,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: esraazizo/hello-world
+      - image: esraazoz/hello-world
         name: hello-world
         imagePullPolicy: Always
         ports:
